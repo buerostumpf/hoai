@@ -1,26 +1,19 @@
-import os
-import plistlib
-import readline
 import json
-from FeeCalc import FeeCalc
+import readline
+
+from fee_calc import (
+    FeeCalc,
+    FeeCalcError,
+    load_tables,
+)
 
 _DEFAULT_PARAGRAPH = 6
 
 
-def load_fee_config(fd_path):
-    """Load fee configuration from either plist/xml or JSON."""
-    if fd_path.lower().endswith(".json"):
-        with open(fd_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    else:
-        with open(fd_path, "rb") as f:
-            return plistlib.load(f)
+# Use JSON as the canonical data source; fall back to plist if needed.
+DATA_PATH = "hoai2013.json"
 
-
-# fdPath = "HonorartabellenHOAI2013.xml"
-fdPath = "HOAI2013.plist"
-
-pl = load_fee_config(fdPath)
+tables = load_tables(DATA_PATH)
 
 #  phases  = pl["phases"]
 
@@ -28,8 +21,8 @@ pl = load_fee_config(fdPath)
 #  for phase in phases:
 #      print('{:30}'.format(phase) + "\t" + '{:4.2f}'.format(phases[phase]))
 
-#  paragraphs = pl["paragraph"]
-paragraphs = pl["paragraphs"]
+#  paragraphs = tables["paragraph"]
+paragraphs = tables["paragraphs"]
 
 for index, paragraph in enumerate(paragraphs):
     print(str(index + 1) + "\t" + paragraph["paragraph"])
@@ -47,20 +40,34 @@ else:
     zone = int(zone)
 
 fee_range_raw = input("\nHonorarsatz (0.0 -1.0): ")
-if fee_range_raw == '':
+if fee_range_raw == "":
     fee_range = 0.0
 else:
     # Normalize: remove %, replace ',' with '.'
-    s = fee_range_raw.strip().replace('%', '').replace(',', '.')
+    s = fee_range_raw.strip().replace("%", "").replace(",", ".")
     try:
         fee_range = float(s)
     except ValueError:
-        print("Ungültiger Honorarsatz, setze auf 0.0")
-        fee_range = 0.0
+        print("Ungültiger Honorarsatz, Eingabe konnte nicht als Zahl gelesen werden.")
+        raise SystemExit(1)
 
-applicable_cost = float(input("\nanrechenbare Herstellungskosten: "))
+try:
+    applicable_cost = float(input("\nanrechenbare Herstellungskosten: "))
+except ValueError:
+    print("Ungültige Eingabe für anrechenbare Herstellungskosten.")
+    raise SystemExit(1)
 
-fee_calculation = FeeCalc(zone,fee_range,applicable_cost,selected_paragraph)
+try:
+    fee_calculation = FeeCalc(
+        tables=tables,
+        zone=zone,
+        fee_range=fee_range,
+        applicable_cost=applicable_cost,
+        paragraph_index=selected_paragraph,
+    )
+except FeeCalcError as exc:
+    print(f"Fehler bei der Eingabe ({exc.code}): {exc}")
+    raise SystemExit(1)
 
 fee = fee_calculation.fee
 print("\n" + fee_calculation.paragraph["paragraph"] + 
@@ -70,7 +77,7 @@ print("\n" + fee_calculation.paragraph["paragraph"] +
 print("Gesamthonorar " + '{:10,.2f}'.format(fee))
 print("_"*60)
 
-fee_calculation.printFeeForPhases()
+fee_calculation.print_fee_for_phases()
 
 # phases =  fee_calculation.phases
 # for phase in phases:
