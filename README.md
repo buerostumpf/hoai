@@ -1,18 +1,39 @@
-hoai-python
-===========
+# hoai-python
 
-This project contains a fee calculation engine for the German *Honorarordnung für Architekten und Ingenieure* (HOAI) 2013. The core logic lives in `FeeCalc.py`, which reads structured fee tables (currently provided as plist/XML or JSON) and computes fees based on:
+**hoai-python** is a Python library for calculating professional fees under the German **HOAI 2013 / HOAI 2021** (*Honorarordnung für Architekten und Ingenieure*).
 
-- **Paragraph / Leistungsbild**
-- **Honorarzone**
-- **Honorarsatz** (as a fraction between 0.0 and 1.0)
-- **Anrechenbare Herstellungskosten**
+The project provides a reusable calculation engine that reads structured HOAI fee tables and computes architect and engineer fees based on the official fee structure.
 
-The script `calculate_fee.py` is a simple CLI frontend that:
+The library is designed to be used by different frontends such as:
 
-- loads the HOAI fee tables,
-- lets you choose a paragraph and zone,
-- asks for rate and applicable costs,
-- prints the total fee and a breakdown per Leistungsphase.
+- command-line tools
+- web applications
+- desktop applications
+- BIM / cost-planning software
 
-The long-term goal is for `FeeCalc.py` to be a reusable library that can be imported from different frontends (web UI, desktop app, CLI, etc.), all sharing the same calculation rules and data tables.
+
+---
+
+# Features
+
+- HOAI 2013 / 2021 fee calculation
+- configurable fee tables (JSON or plist/XML)
+- calculation based on  
+  - service profile (*Leistungsbild*)
+  - fee zone (*Honorarzone*)
+  - fee rate (*Honorarsatz*)
+  - chargeable construction costs (*anrechenbare Kosten*) for services for buildings
+  - area in hectares for landscape and urban planning projects
+- breakdown by **service phases (Leistungsphasen)**
+- CLI frontend included
+- reusable calculation engine for integration into other tools
+
+
+---
+
+# Installation
+
+Until the package is published on PyPI you can install it locally:
+
+```bash
+pip install .
