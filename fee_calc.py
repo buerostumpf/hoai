@@ -119,7 +119,9 @@ class FeeCalc:
         first_row = self._paragraph["feetable"][0]
         # index 0 is applicable_cost; we access zone and zone+1
         min_zone = 1
-        max_zone = len(first_row) - 2
+        max_zone = self._paragraph.get("zones")
+        if max_zone is None:
+            max_zone = len(first_row) - 2
         if not (min_zone <= zone <= max_zone):
             raise FeeCalcError(
                 ERROR_INVALID_ZONE,

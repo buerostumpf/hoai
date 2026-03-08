@@ -1,0 +1,14 @@
+1	§18 Flächennutzungsplan	3
+2	§19 Bebauungsplan	3
+3	§23 Landschaftsplan	3
+4	§24 Grünordnungsplan	3
+5	§25 Landschaftsrahmenplan	3
+6	§26 Landschaftspflegerischer Begleitplan	3
+7	§27 Pflege- und Entwicklungsplan	3
+8	§34 Objektplanung, Leistungsbild Gebäude	5
+9	§34 Objektplanung, Leistungsbild Innenräume	5
+10	§39 Freianlagen	5
+11	§43 Ingenieurbauwerke	5
+12	§47 Verkehrsanlagen	5
+13	§51 Tragwerksplanung	5
+14	§55 Technische Ausrüstung	3

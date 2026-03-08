@@ -3,6 +3,7 @@
   "paragraphs": [
     {
       "paragraph": "§18 Flächennutzungsplan",
+      "zones": 3,
       "phases": [
         {
           "phase": "1 Vorentwurf",
@@ -162,6 +163,7 @@
     },
     {
       "paragraph": "§19 Bebauungsplan",
+      "zones": 3,
       "phases": [
         {
           "phase": "1 Vorentwurf",
@@ -321,6 +323,7 @@
     },
     {
       "paragraph": "§23 Landschaftsplan",
+      "zones": 3,
       "phases": [
         {
           "phase": "1 Klären der Aufgabenstellung",
@@ -484,6 +487,7 @@
     },
     {
       "paragraph": "§24 Grünordnungsplan",
+      "zones": 3,
       "phases": [
         {
           "phase": "1 Klären der Aufgabenstellung",
@@ -647,6 +651,7 @@
     },
     {
       "paragraph": "§25 Landschaftsrahmenplan",
+      "zones": 3,
       "phases": [
         {
           "phase": "1 Klären der Aufgabenstellung",
@@ -810,6 +815,7 @@
     },
     {
       "paragraph": "§26 Landschaftspflegerischer Begleitplan",
+      "zones": 3,
       "phases": [
         {
           "phase": "1 Klären der Aufgabenstellung",
@@ -973,6 +979,7 @@
     },
     {
       "paragraph": "§27 Pflege- und Entwicklungsplan",
+      "zones": 3,
       "phases": [
         {
           "phase": "1 Klären der Aufgabenstellung",
@@ -1136,6 +1143,7 @@
     },
     {
       "paragraph": "§34 Objektplanung, Leistungsbild Gebäude",
+      "zones": 5,
       "phases": [
         {
           "phase": "1 Grundlagenermittlung",
@@ -1359,6 +1367,7 @@
     },
     {
       "paragraph": "§34 Objektplanung, Leistungsbild Innenräume",
+      "zones": 5,
       "phases": [
         {
           "phase": "1 Grundlagenermittlung",
@@ -1582,6 +1591,7 @@
     },
     {
       "paragraph": "§39 Freianlagen",
+      "zones": 5,
       "feetable": [
         [
           20000.0,
@@ -1767,6 +1777,7 @@
     },
     {
       "paragraph": "§43 Ingenieurbauwerke",
+      "zones": 5,
       "phases": [
         {
           "phase": "1 Grundlagenermittlung",
@@ -1990,6 +2001,7 @@
     },
     {
       "paragraph": "§47 Verkehrsanlagen",
+      "zones": 5,
       "phases": [
         {
           "phase": "1 Grundlagenermittlung",
@@ -2213,6 +2225,7 @@
     },
     {
       "paragraph": "§51 Tragwerksplanung",
+      "zones": 5,
       "phases": [
         {
           "phase": "1 Grundlagenermittlung",
@@ -2424,6 +2437,7 @@
     },
     {
       "paragraph": "§55 Technische Ausrüstung",
+      "zones": 3,
       "phases": [
         {
           "phase": "1 Grundlagenermittlung",
