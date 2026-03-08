@@ -23,7 +23,7 @@ The library is designed to be used by different frontends such as:
   - fee zone (*Honorarzone*)
   - fee rate (*Honorarsatz*)
   - chargeable construction costs (*anrechenbare Kosten*) for services for buildings
-  - area in hectares for landscape and urban planning projects
+  - area in hectares for landscape and urban planning
 - breakdown by **service phases (Leistungsphasen)**
 - CLI frontend included
 - reusable calculation engine for integration into other tools
