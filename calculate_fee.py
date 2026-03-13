@@ -14,7 +14,7 @@ from fee_calc import (
 )
 
 _DEFAULT_PARAGRAPH_INDEX = 7  # 0-based; §34 Objektplanung Gebäude
-DATA_PATH = "hoai2013.json"
+DATA_PATH = "data/hoai2013.json"
 
 
 def _parse_fee_range(s: str) -> float:

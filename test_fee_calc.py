@@ -14,7 +14,7 @@ from fee_calc import (
 
 
 HERE = pathlib.Path(__file__).parent
-DATA_PATH = HERE / "hoai2013.json"
+DATA_PATH = HERE / "data" / "hoai2013.json"
 
 
 @pytest.fixture(scope="module")
