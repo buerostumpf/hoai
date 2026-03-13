@@ -1,0 +1,4 @@
+{"sessionId": "b7a9eb", "location": "fee_calc.py:__fee_calc", "message": "fee_calc row indices", "data": {"applicable_cost": 1000.0, "i": 0, "low_line_cost": 15000.0, "high_line_cost": 1000.0, "table_min": 1000.0, "table_max": 15000.0, "at_min_edge": true}, "hypothesisId": "A"}
+{"sessionId": "b7a9eb", "location": "fee_calc.py:__fee_calc", "message": "fee_calc result", "data": {"applicable_cost": 1000.0, "computed_fee": 92683.5, "at_min_edge": true}, "hypothesisId": "D"}
+{"sessionId": "b7a9eb", "location": "fee_calc.py:__fee_calc", "message": "fee_calc row indices", "data": {"applicable_cost": 1001.0, "i": 1, "low_line_cost": 1000.0, "high_line_cost": 1250.0, "table_min": 1000.0, "table_max": 15000.0, "at_min_edge": false}, "hypothesisId": "A"}
+{"sessionId": "b7a9eb", "location": "fee_calc.py:__fee_calc", "message": "fee_calc result", "data": {"applicable_cost": 1001.0, "computed_fee": 92728.32800000001, "at_min_edge": false}, "hypothesisId": "D"}

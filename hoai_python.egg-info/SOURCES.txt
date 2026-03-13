@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+archive/FeeCalculation.py
+archive/testplist.py
+archive/untitled.py
+hoai_python.egg-info/PKG-INFO
+hoai_python.egg-info/SOURCES.txt
+hoai_python.egg-info/dependency_links.txt
+hoai_python.egg-info/entry_points.txt
+hoai_python.egg-info/requires.txt
+hoai_python.egg-info/top_level.txt

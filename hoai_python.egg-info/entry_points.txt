@@ -1,0 +1,2 @@
+[console_scripts]
+hoai-fee = calculate_fee:main
