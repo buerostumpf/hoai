@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "hoai-python"
 version = "0.2.0"
-description = "HOAI 2013 fee calculation library and CLI"
+description = "HOAI 2013/2021 fee calculation library and CLI"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}

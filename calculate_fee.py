@@ -89,7 +89,7 @@ def _format_error(exc: FeeCalcError) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="HOAI 2013 Honorarberechnung (Leistungsbild, Zone, Satz, Kosten)."
+        description="HOAI 2013/2021 Honorarberechnung (Leistungsbild, Zone, Satz, Kosten)."
     )
     parser.add_argument(
         "--paragraph", "-p",

@@ -2,7 +2,7 @@ import json
 import plistlib
 
 """
-Core fee calculation logic for HOAI 2013.
+Core fee calculation logic for HOAI 2013/2021.
 
 This module is intended to be reusable from different frontends
 (CLI, web, desktop, etc.). It operates on an in-memory data

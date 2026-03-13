@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Split hoai2013.json into one JSON file per paragraph. Leaves original unchanged."""
+"""Split HOAI 2013/2021 table JSON into one file per paragraph. Leaves original unchanged."""
 import json
 import pathlib
 import re
